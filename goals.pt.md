@@ -1,3 +1,5 @@
+#Objetivos
+
 Neste curso o aluno aprenderá a:
 
 - Escrever código nos paradigmas imperativo e orientado a objetos;

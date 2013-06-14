@@ -1,3 +1,5 @@
+#Goals
+
 In this course the student will learn to:
 
 - Write code in imperative and object oriented paradigms;
