@@ -65,3 +65,9 @@ Viu como é fácil? Se eu quero apenas escrever na tela "Hello World!", eu só d
 
 
 ###É modular
+
+
+##Show me the money
+
+
+##História e Fatos
