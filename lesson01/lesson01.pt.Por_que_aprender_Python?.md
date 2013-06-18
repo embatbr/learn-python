@@ -70,6 +70,43 @@ Viu como é fácil? Se eu quero apenas escrever "Hello World!" na tela, eu só d
 
 ###Abstrai o desnecessário
 
+Python possui algumas característica que muitos programadores Java esperavam ansiosamente: herança múltipla, valor default num parâmetro de função, dicionários e etc. Em java, se você quer que seu método possua um valor default em alguns parametros, é necessário duplicar o método, chamando o original. Ex:
+
+```
+...
+public String criarFrase(String[] palavras)
+{
+    return this.criarFrase(palavras, ' ');
+}
+
+public String criarFrase(String[] palavras, char separador)
+{
+    String frase = palavras[0];
+    for(int i = 1; i < palavras.length; i++)
+    {
+        frase = frase + separador + palavras[i];
+    }
+
+    return frase;
+}
+...
+```
+As chamadas dos métodos com e sem o separador:
+```
+String[] palavras = {"Criando", "uma", "frase"};
+System.out.println(exemplos.criarFrase(palavras));
+System.out.println(exemplos.criarFrase(palavras, ' '));
+System.out.println(exemplos.criarFrase(palavras, '-'));
+```
+Possuem saídas:
+```
+Criando uma frase
+Criando uma frase
+Criando-uma-frase
+```
+
+Já em Python basta fazer
+
 
 ###É modular
 
