@@ -1,5 +1,12 @@
 #Por que aprender Python?
 
+    1. Introdução
+        1. Python é amiga do programador
+        2. Abstrai o desnecessário
+        3. É modular
+    2. Show me the money
+    3. História e fatos
+
 
 ##Introdução
 
@@ -58,7 +65,7 @@ Hello World!
 $
 ```
 
-Viu como é fácil? Se eu quero apenas escrever na tela "Hello World!", eu só deveria precisar enviar ao computador o comando `escreva "Hello World!"`, não ter que criar uma estrutura de objeto, nem chamar uma biblioteca padrão como `stdio` (**St**andar**d** **IO** - Entrada e Saída Padrão). O resto o sistema operacional deve abstrair. Isto leva a...
+Viu como é fácil? Se eu quero apenas escrever "Hello World!" na tela, eu só deveria precisar enviar ao computador o comando `escreva "Hello World!"`, não ter que criar uma estrutura de objeto, nem chamar uma biblioteca padrão como `stdio` (**St**andar**d** **IO** - Entrada e Saída Padrão). O resto o sistema operacional deve abstrair. Isto leva a...
 
 
 ###Abstrai o desnecessário
@@ -70,4 +77,4 @@ Viu como é fácil? Se eu quero apenas escrever na tela "Hello World!", eu só d
 ##Show me the money
 
 
-##História e Fatos
+##História e fatos
