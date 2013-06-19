@@ -105,7 +105,28 @@ Criando uma frase
 Criando-uma-frase
 ```
 
-Já em Python basta fazer
+Já em Python basta fazer:
+```
+def criarFrase(palavras, separador=' '):
+    frase = palavras[0]
+    for i in range(1, len(palavras)):
+        frase = frase + separador + palavras[i]
+
+    return frase
+```
+Com chamadas:
+```
+palavras = ['Criando', 'uma', 'frase']
+print(criarFrase(palavras))
+print(criarFrase(palavras, ' '))
+print(criarFrase(palavras, '-'))
+```
+E saídas:
+```
+Criando uma frase
+Criando uma frase
+Criando-uma-frase
+```
 
 
 ###É modular
