@@ -128,6 +128,8 @@ Criando uma frase
 Criando-uma-frase
 ```
 
+No código Java, para ter mais de um valor default é necessário criar todas as combinações desejadas. Isto leva a um mal aproveitamento do esforço do programador.
+
 
 ###É modular
 
