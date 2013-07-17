@@ -1,4 +1,4 @@
-public class Exemplos
+public class CriarFrase
 {
     public String criarFrase(String[] palavras)
     {
@@ -18,11 +18,11 @@ public class Exemplos
 
     public static void main(String[] args)
     {
-        Exemplos exemplos = new Exemplos();
+        CriarFrase frase = new CriarFrase();
 
         String[] palavras = {"Criando", "uma", "frase"};
-        System.out.println(exemplos.criarFrase(palavras));
-        System.out.println(exemplos.criarFrase(palavras, ' '));
-        System.out.println(exemplos.criarFrase(palavras, '-'));
+        System.out.println(frase.criarFrase(palavras));
+        System.out.println(frase.criarFrase(palavras, ' '));
+        System.out.println(frase.criarFrase(palavras, '-'));
     }
 }
