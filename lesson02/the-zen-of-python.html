@@ -1,23 +1,148 @@
-<div id="the-zen-of-python">
+<div id="the-zen-of-python" align="justify">
   <p><em>
-    Beautiful is better than ugly.
-    Explicit is better than implicit.
-    Simple is better than complex.
-    Complex is better than complicated.
-    Flat is better than nested.
-    Sparse is better than dense.
-    Readability counts.
-    Special cases aren't special enough to break the rules.
-    Although practicality beats purity.
-    Errors should never pass silently.
-    Unless explicitly silenced.
-    In the face of ambiguity, refuse the temptation to guess.
-    There should be one-- and preferably only one --obvious way to do it.
-    Although that way may not be obvious at first unless you're Dutch.
-    Now is better than never.
-    Although never is often better than *right* now.
-    If the implementation is hard to explain, it's a bad idea.
-    If the implementation is easy to explain, it may be a good idea.
+    Beautiful is better than ugly.<br>
+    Explicit is better than implicit.<br>
+    Simple is better than complex.<br>
+    Complex is better than complicated.<br>
+    Flat is better than nested.<br>
+    Sparse is better than dense.<br>
+    Readability counts.<br>
+    Special cases aren't special enough to break the rules.<br>
+    Although practicality beats purity.<br>
+    Errors should never pass silently.<br>
+    Unless explicitly silenced.<br>
+    In the face of ambiguity, refuse the temptation to guess.<br>
+    There should be one-- and preferably only one --obvious way to do it.<br>
+    Although that way may not be obvious at first unless you're Dutch.<br>
+    Now is better than never.<br>
+    Although never is often better than *right* now.<br>
+    If the implementation is hard to explain, it's a bad idea.<br>
+    If the implementation is easy to explain, it may be a good idea.<br>
     Namespaces are one honking great idea -- let's do more of those!
   </em></p>
+
+  <br id="sumario-break">
+  <div id="sumario">
+    <h1><strong>Sumário</strong></h1>
+    <ul>
+      <li><a href="#first-things-first-title">First things first</a></li>
+      <li><a href="#hello-world-e-mais-umas-coisinhas-title">Hello World e mais umas coisinhas</a></li>
+      <li><a href="#indentacao-title">Indentação</a></li>
+      <li><a href="#numerologia-e-o-poder-da-matematica-title">Numerologia e o poder da matemática</a></li>
+    </ul>
+  </div>
+
+  <br id="first-things-first-title">
+  <div id="first-things-first">
+    <h2><strong>First things first</strong></h2>
+    <p>
+      Conforme explicado no final da última aula, é recomendado usar alguma distribuição Linux. Caso prefira Windows, facilitará muito usar algum terminal mais poderoso, como por exemplo o <a href="http://technet.microsoft.com/en-us/scriptcenter/dd742419.aspx">Windows PowerShell</a>. Para os usuário de Ubuntu, a instalação do Python 3 necessita de alguns passos:
+    </p>
+    <p>
+      <code>sudo apt-get install python3.2</code>
+    </p>
+    <p>
+      Depois deste esforço hercúleo, seu computador está pronto para rodar códigos <em>.py</em>. Recomendo também utilizar o <a href="http://www.sublimetext.com/">sublime-text</a> como editor de texto. Existem bruxarias por trás desta simples ferramenta que estão além da compreensão do programador default (e de tabela irão torná-lo um <a href="https://edulify.com/ranierivalenca/u">octopus developer</a>).
+    </p>
+  </div>
+
+  <br id="hello-world-e-mais-umas-coisinhas-title">
+  <div id="hello-world-e-mais-umas-coisinhas">
+    <h2><strong>Hello World e mais umas coisinhas</strong></h2>
+    <p>
+      Como de praxe, nosso primeiro programa é o já batido <em>Hello World</em>. Vimos na aula anterior que um simples <code>print("Hello World!")</code> escreve na saída <strong>Hello World!</strong>. Para escrever apenas esta mensagem, seu arquivo <em>hello.py</em> precisa apenas da linha <code>print("Hello World!")</code>. Não é necessário importar algo nem criar um objeto "Printer". A função <code>print()</code> faz parte de um pacote padrão importado automaticamente pelo interpretador. É uma função <a href="http://docs.python.org/3.2/library/functions.html">built-in</a>.
+    </p>
+    <p>
+      A função <code>print()</code> aceita qualquer quantidade de argumentos. Sua assinatura é <code>print(*objects, sep=' ', end='\n', file=sys.stdout)</code>, onde <code>objects</code> são os parametros variáveis a ser escritos (o <code>*</code> indica quantidade variável), <code>sep</code> é o separador dos parametros (comumente um espaço vazio), <code>end</code> é o caractere de fim de linha (por default uma quebra de linha) e <code>file</code> é o arquivo de stream onde a função irá escrever os <code>objects</code>, cujo valor padrão é a tela do terminal.
+    </p>
+    <p>
+      Comentários em Python existem apenas de um modo: <code>#</code>. Os comentários são sempre de linha, usando o jogo-da-velha. Para comentar diversas linhas, todas devem iniciar-se com <code>#</code>. Qualquer editor básico possui algum atalho para comentários, geralmente <code>ctrl</code> + <code>/</code>.
+    </p>
+    <p>
+      <div style="color: red;"><strong>Warning!</strong></div>
+      <div>
+        <strong>Caso tente usar caracteres especiais, o interpretador Python pode não entender e escrever coisas estranhas. Para corrigir isto, coloque esta linha como primeira do seu arquivo <em>.py</em>: <code># -*- coding: utf-8 -*-</code>.</strong>
+      </div>
+    </p>
+  </div>
+
+  <br id="indentacao-title">
+  <div id="indentacao">
+    <h2><strong>Indentação</strong></h2>
+    <p><img style="cursor: default;" src="/lesson/attachments/1015"></p>
+    <p>
+      Diferentemente das demais linguagens conhecidas (C/C++, Java e etc.), Python não engloba blocos de comandos usando <code>{}</code> (chaves) ou <code>begin</code> e <code>end</code>. Tudo se resume a indentação. O seguinte código, por exemplo, irá compilar:
+    </p>
+    <p><pre>
+print("Hello World!")
+print("Aloha Hawaii")
+print("Hallo Welt")</pre>
+    </p>
+    <p>
+      Pois todos estão no mesmo nível de indentação. Mas o próximo irá gerar um erro:
+    </p>
+    <p><pre>
+print("Vai...")
+print("rodar...")
+    print("perfeitamente")</pre>
+    </p>
+    <p>
+      Pois os comandos não estão no mesmo nível. A linguagem é "chatinha" neste ponto por ter como um dos seus princípios a legibilidade do código.
+    </p>
+  </div>
+
+  <br id="numerologia-e-o-poder-da-matematica-title">
+  <div id="numerologia-e-o-poder-da-matematica">
+    <h2><strong>Numerologia</strong></h2>
+    <p>
+      A matemática de Python não é algo de outro mundo. Similar às outras linguagens, em Python + efetua somas, / divide números e > testa se o número à esquerda é maior que o número à direita. A seguir os símbolos matemáticos:
+    </p>
+    <p>
+      <ul>
+        <li><code>+</code> soma</li>
+        <li><code>-</code> subtração</li>
+        <li><code>/</code> divisão</li>
+        <li><code>*</code> multiplicação</li>
+        <li><code>**</code> exponenciação</li>
+        <li><code>%</code> resto da divisão (módulo)</li>
+        <li><code>&lt</code> menor que</li>
+        <li><code>&gt</code> maior que</li>
+        <li><code>&lt=</code> menor ou igual que</li>
+        <li><code>&gt=</code> maior ou igual que</li>
+      </ul>
+    </p>
+    <p>
+      E seus usos (digite no terminal <code>python3.2</code> para usar o interpretador interativo):
+    </p>
+    <p>
+<pre>&gt&gt&gt 2 + 3
+5
+&gt&gt&gt 4 - 7
+-3
+&gt&gt&gt 2 * 4
+8
+&gt&gt&gt 2 ** 3
+8
+&gt&gt&gt 4 % 3
+1
+&gt&gt&gt 2 &lt 3
+True
+&gt&gt&gt 2 &gt 3
+False
+&gt&gt&gt 2 &lt= 3
+True
+&gt&gt&gt 2 &gt= 2
+True
+</pre>
+    </p>
+  </div>
+
+  <br>
+  <div id="next-episode">
+    <h2><strong>Next episode of <em>Aprenda Python</em></strong></h2>
+    <p>
+      A aula seguinte irá abordar variáveis e tipagem dinâmica, além de uma discussão mais aprofundada sobre o uso da função <code>print()</code>.
+    </p>
+  </div>
+  <br>
 </div>
