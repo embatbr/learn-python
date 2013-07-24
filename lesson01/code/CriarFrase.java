@@ -1,11 +1,11 @@
 public class CriarFrase
 {
-    public String criarFrase(String[] palavras)
+    public static String criarFrase(String[] palavras)
     {
-        return this.criarFrase(palavras, ' ');
+        return CriarFrase.criarFrase(palavras, ' ');
     }
 
-    public String criarFrase(String[] palavras, char separador)
+    public static String criarFrase(String[] palavras, char separador)
     {
         String frase = palavras[0];
         for(int i = 1; i < palavras.length; i++)
@@ -18,11 +18,9 @@ public class CriarFrase
 
     public static void main(String[] args)
     {
-        CriarFrase frase = new CriarFrase();
-
         String[] palavras = {"Criando", "uma", "frase"};
-        System.out.println(frase.criarFrase(palavras));
-        System.out.println(frase.criarFrase(palavras, ' '));
-        System.out.println(frase.criarFrase(palavras, '-'));
+        System.out.println(CriarFrase.criarFrase(palavras));
+        System.out.println(CriarFrase.criarFrase(palavras, ' '));
+        System.out.println(CriarFrase.criarFrase(palavras, '-'));
     }
 }

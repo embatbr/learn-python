@@ -1,5 +1,6 @@
 <div id="por-que-aprender-python" align="justify">
   <p><img style="cursor: default;" src="/lesson/attachments/1032"></p>
+  <small>Fonte: <a href="http://xkcd.com/353/">xkcd</a></small>
 
   <br id="sumario-title">
   <div id="sumario">
@@ -83,10 +84,9 @@ $</pre>
       Exemplo:
       <pre>public class CriarFrase
 {
-    ...
     public static String criarFrase(String[] palavras)
     {
-        return this.criarFrase(palavras, ' ');
+        return CriarFrase.criarFrase(palavras, ' ');
     }
 
     public static String criarFrase(String[] palavras, char separador)
@@ -99,20 +99,18 @@ $</pre>
 
         return frase;
     }
-    ...
+
+    public static void main(String[] args)
+    {
+        String[] palavras = {"Criando", "uma", "frase"};
+        System.out.println(CriarFrase.criarFrase(palavras));
+        System.out.println(CriarFrase.criarFrase(palavras, ' '));
+        System.out.println(CriarFrase.criarFrase(palavras, '-'));
+    }
 }</pre>
     </p>
     <p>
-      As chamadas dos métodos com e sem o separador:
-      <pre>    ...
-    String[] palavras = {"Criando", "uma", "frase"};
-    System.out.println(CriarFrase.criarFrase(palavras));
-    System.out.println(CriarFrase.criarFrase(palavras, ' '));
-    System.out.println(CriarFrase.criarFrase(palavras, '-'));
-    ...</pre>
-    </p>
-    <p>
-      Possuem saídas:
+      As chamadas dos métodos com e sem o separador possuem saídas:
       <pre>Criando uma frase
 Criando uma frase
 Criando-uma-frase</pre>
@@ -124,17 +122,15 @@ Criando-uma-frase</pre>
     for i in range(1, len(palavras)):
         frase = frase + separador + palavras[i]
 
-    return frase</pre>
-    </p>
-    <p>
-      Com chamadas:
-      <pre>palavras = ['Criando', 'uma', 'frase']
+    return frase
+
+palavras = ['Criando', 'uma', 'frase']
 print(criarFrase(palavras))
 print(criarFrase(palavras, ' '))
 print(criarFrase(palavras, '-'))</pre>
     </p>
     <p>
-      E saídas:
+      Com saídas:
       <pre>Criando uma frase
 Criando uma frase
 Criando-uma-frase</pre>
@@ -165,7 +161,7 @@ Criando-uma-frase</pre>
 
   <br>
   <div id="next-episode">
-    <h2><strong>Next episode</strong></h2>
+    <h2><strong>Next episode of <em>Aprenda Python</em></strong></h2>
     <p>
       Nas próximas aulas entraremos de cabeça na programação Python. Usaremos a versão 3 da linguagem (particularmente a 3.2). Embora não seja necessário, facilita muito usar uma distribuição Linux. As coisas fluem melhor que no sistema das janelas.
     </p>
