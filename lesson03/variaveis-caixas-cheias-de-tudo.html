@@ -7,6 +7,9 @@
     <h1><strong>Sumário</strong></h1>
     <ul>
       <li><a href="#dinamico-nao-e-generico-title">Dinâmico não é genérico</a></li>
+      <li><a href="#a-prensa-de-van-rossum-title">A Prensa de van Rossum</a></li>
+      <li><a href="#aspas-simples-title">Aspas simples?</a></li>
+      <li><a href="#emptying-boxes-title">Emptying boxes</a></li>
     </ul>
   </div>
 
@@ -14,7 +17,7 @@
   <div id="dinamico-nao-e-generico">
     <h2><strong>Dinâmico não é genérico</strong></h2>
     <p>
-      Para quem nunca programou numa linguagem com tipagem dinâmica, pode demorar um pouco até considerar algo agradável (ou até correto) de se fazer. Em Python, o programador não precisa declarar tipos para as variáveis que ele usará. Se é uma linguagem de alto nível e amiga do programador, ela deve tornar minha vida mais fácil e se preocupar com o que eu guardo nas minhas caixas. Ex:
+      Para quem nunca programou numa linguagem com tipagem dinâmica, pode demorar um pouco até considerar algo agradável (ou até correto) de se fazer. Em Python, o programador não precisa declarar tipos para as variáveis que ele usará. Se é uma linguagem de alto nível e amiga do programador, ela deve tornar minha vida mais fácil e se preocupar com o que eu guardo nas minhas varíáveis. Ex:
     </p>
     <p>
       <pre>porcos = 3
@@ -30,8 +33,7 @@ print("Mas nenhum é tão querido quanto", vacaPremiada)
 
 vacaPremiada = 200
 
-print("Minha vaca premiada pesa", vacaPremiada, "quilos")
-</pre>
+print("Minha vaca premiada pesa", vacaPremiada, "quilos")</pre>
     </p>
     <p>
       Tem saídas:
@@ -50,8 +52,81 @@ Minha vaca premiada pesa 200 quilos</pre>
     </p>
   </div>
 
-  <br>
-  <div>
+  <br id="a-prensa-de-van-rossum-title">
+  <div id="a-prensa-de-van-rossum">
+    <h2><strong>A Prensa de van Rossum</strong></h2>
+    <p><img style="cursor: default;" src="/lesson/attachments/1048"></p>
+    <small><a href="http://www.python.org/~guido/">Guido van Rossum</a>, criador do Python</small>
+    <br>
+    <br>
+    <p>
+      No tópico anterior vimos uma variável do tipo <em>string</em>, a <code>vacaPremiada</code>. Strings nada mais são que listas de caracteres em sequência, formando algo "imprimível". Mesmo que o dado a ser escrito seja um número ou um valor booleano (True ou False), para colocar na tela, num arquivo texto ou numa mensagem a ser transmitida por email, é necessário convertê-los para string.
+    </p>
+    <p>
+      A seguinte linha extraída do código acima, <code>print("São no total", porcos + galinhas + vacas, "bichos")</code> poderia ser trocada por:
+    </p>
+    <p>
+      <pre>total = "São no total " + str(porcos + galinhas + vacas) + " bichos"
+print(total)</pre>
+    </p>
+    <p>
+      Mas isto é menos eficiente que usar <em>string format</em>. Em ambos os casos vários objetos são concatenados, criando strings intermediárias. Com string format só é preciso fazer <code>print("São no total %d bichos" % (porcos + galinhas + vacas))</code>. Mais elegante e eficiente. Abaixo um exemplo um pouco maior de uso do string format:
+    </p>
+    <p>
+      <pre>nome = 'Eduardo Tenório'
+idade = 27
+altura = 1.83
+peso = 110 #sou denso
+olhos = 'verdes'
+pele = 'bronzeada de LED'
+cabelo = 'ruim'
+
+print('Vamos falar sobre %s' % nome)
+print('Ele possui %1.2f de altura' % altura)
+print('Pesa %d quilos (densidade alta)' % peso)
+print('Possui charmosos olhos %s e pele %s' % (olhos, pele))
+print('E tem cabelo %s' % cabelo)</pre>
+    </p>
+    <p>
+      Os números e letras depois do <em>%</em> ficam como exercício. Por que no segundo print existe <code>%1.2f</code>?
+    </p>
+  </div>
+
+  <br id="aspas-simples-title">
+  <div id="aspas-simples">
+    <h2><strong>Aspas simples?</strong></h2>
+    <p>
+      Se você prestou atenção até agora e deu uma pequena olhada nos códigos, deve ter percebido que string são englobadas por '' (aspas simples), contrariando o "padrão". Em Python strings podem ser criadas usando qualquer um dos modos, desde que o tipo de aspa que fecha seja o mesmo que abre. Logo <code>'olá enfermeira'</code> e <code>"olá enfermeira"</code> são strings válidas. Os demais não.
+    </p>
+    <p>
+      Também é possível criar strings de múltiplas linhas, usando triplas de "" ou ''. A diferença é que neste caso a formatação mantém-se. Exemplos:
+    </p>
+    <p>
+      <pre>stringLine = 'linha 1\nlinha 2'
+stringMultLine = '''linha 1
+linha 2'''
+
+print(stringLine)
+print()
+print(stringMultLine)</pre>
+    </p>
+    <p>
+      <pre>$ python3.2 stringLine.py
+linha 1
+linha 2
+
+linha 1
+linha 2</pre>
+    </p>
+  </div>
+
+  <br id="emptying-boxes-title">
+  <div id="emptying-boxes">
+    <h2><strong>Emptying boxes</strong></h2>
+    <p><img style="cursor: default;" src="/lesson/attachments/1053"></p>
+    <small>Fonte: <a href="http://sebastienmillon.tumblr.com/post/16726406788/boxes-can-get-very-sad-dont-forget-to-keep-them">Sebastien Millon</a></small>
+    <br>
+    <br>
   </div>
 
   <br>
