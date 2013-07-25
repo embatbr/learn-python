@@ -36,13 +36,13 @@
   <div id="first-things-first">
     <h2><strong>First things first</strong></h2>
     <p>
-      Conforme explicado no final da última aula, é recomendado usar alguma distribuição Linux. Caso prefira Windows, facilitará muito usar algum terminal mais poderoso, como por exemplo o <a href="http://technet.microsoft.com/en-us/scriptcenter/dd742419.aspx">Windows PowerShell</a>. Para os usuário de Ubuntu, a instalação do Python 3 necessita de alguns passos:
+      Conforme explicado no final da última aula, é recomendado usar alguma distribuição Linux. Caso prefira Windows, facilitará muito usar algum terminal mais poderoso, como por exemplo o <a href="http://technet.microsoft.com/en-us/scriptcenter/dd742419.aspx">Windows PowerShell</a>. Os usuários do Windows podem encontrar a versão 3.2 neste <a href="http://www.python.org/download/releases/3.2.5/#download">link</a>. Para os usuário de Ubuntu, a instalação do Python 3.2 necessita de alguns passos (portanto preste bastante atenção):
     </p>
     <p>
       <code>sudo apt-get install python3.2</code>
     </p>
     <p>
-      Depois deste esforço hercúleo, seu computador está pronto para rodar códigos <em>.py</em>. Recomendo também utilizar o <a href="http://www.sublimetext.com/">sublime-text</a> como editor de texto. Existem bruxarias por trás desta simples ferramenta que estão além da compreensão do programador default (e de tabela irão torná-lo um <a href="https://edulify.com/ranierivalenca/u">octopus developer</a>).
+      Depois deste esforço hercúleo, seu computador está pronto para rodar códigos <em>.py</em>. Recomendo também utilizar o <a href="http://www.sublimetext.com/">sublime-text</a> como editor de texto (desenvolvido em Python). Existem bruxarias por trás desta simples ferramenta que estão além da compreensão do programador default (e de tabela irão torná-lo um <a href="https://edulify.com/ranierivalenca/u">octopus developer</a>).
     </p>
   </div>
 
@@ -53,7 +53,7 @@
       Como de praxe, nosso primeiro programa é o já batido <em>Hello World</em>. Vimos na aula anterior que um simples <code>print("Hello World!")</code> escreve na saída <strong>Hello World!</strong>. Para escrever apenas esta mensagem, seu arquivo <em>hello.py</em> precisa apenas da linha <code>print("Hello World!")</code>. Não é necessário importar algo nem criar um objeto "Printer". A função <code>print()</code> faz parte de um pacote padrão importado automaticamente pelo interpretador. É uma função <a href="http://docs.python.org/3.2/library/functions.html">built-in</a>.
     </p>
     <p>
-      A função <code>print()</code> aceita qualquer quantidade de argumentos. Sua assinatura é <code>print(*objects, sep=' ', end='\n', file=sys.stdout)</code>, onde <code>objects</code> são os parametros variáveis a ser escritos (o <code>*</code> indica quantidade variável), <code>sep</code> é o separador dos parametros (comumente um espaço vazio), <code>end</code> é o caractere de fim de linha (por default uma quebra de linha) e <code>file</code> é o arquivo de stream onde a função irá escrever os <code>objects</code>, cujo valor padrão é a tela do terminal.
+      A função <code>print()</code> aceita qualquer quantidade de argumentos. Sua assinatura é <code>print(*objects, sep=' ', end='\n', file=sys.stdout)</code>, onde <code>objects</code> são os parametros variáveis a ser escritos (o <code>*</code> indica quantidade variável), <code>sep</code> é o separador dos parametros (comumente um espaço vazio), <code>end</code> é o caractere de fim de linha (por default uma quebra de linha) e <code>file</code> é o arquivo de stream onde a função irá escrever os <code>objects</code>, cujo objeto padrão é a tela do terminal.
     </p>
     <p>
       Comentários em Python existem apenas de um modo: <code>#</code>. Os comentários são sempre de linha, usando o jogo-da-velha. Para comentar diversas linhas, todas devem iniciar-se com <code>#</code>. Qualquer editor básico possui algum atalho para comentários, geralmente <code>ctrl</code> + <code>/</code>.
@@ -101,7 +101,8 @@ print("rodar...")
       <ul>
         <li><code>+</code> soma</li>
         <li><code>-</code> subtração</li>
-        <li><code>/</code> divisão</li>
+        <li><code>/</code> divisão real</li>
+        <li><code>//</code> divisão inteira</li>
         <li><code>*</code> multiplicação</li>
         <li><code>**</code> exponenciação</li>
         <li><code>%</code> resto da divisão (módulo)</li>
@@ -133,7 +134,10 @@ False
 True
 &gt&gt&gt 2 &gt= 2
 True
-</pre>
+&gt&gt&gt 2 / 3
+0.6666666666666666
+&gt&gt&gt 2 // 3
+0</pre>
     </p>
   </div>
 
