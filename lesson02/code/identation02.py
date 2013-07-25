@@ -1,3 +1,3 @@
-print("Vai...")
-print("rodar...")
-    print("perfeitamente")
+print('Vai...')
+print('rodar...')
+    print('perfeitamente')
